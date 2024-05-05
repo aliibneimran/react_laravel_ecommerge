@@ -6,7 +6,7 @@ export default function Sidebar() {
   return (
     <div>
       <div className="main-sidebar sidebar-style-2">
-      {user.usertype===1 &&(
+
       <aside id="sidebar-wrapper">
         <div className="sidebar-brand">
           <Link href={route('admin')}> <img alt="image" src="assets/img/logo.png" className="header-logo" /> <span className="logo-name">Otika</span>
@@ -20,39 +20,6 @@ export default function Sidebar() {
           <li className="dropdown">
             <Link href="#" className="menu-toggle nav-link has-dropdown"><i data-feather="briefcase" /><span>Sales</span></Link>
             <ul className="dropdown-menu">
-              {/* <li><Link className="nav-link" href="widget-chart.html">Add Sale</Link></li> */}
-              <li><Link className="nav-link" href="widget-data.html">Total Sales</Link></li>
-            </ul>
-          </li>
-
-          <li className="menu-header">Pages</li>
-          <li className="dropdown">
-            <Link href="#" className="menu-toggle nav-link has-dropdown"><i data-feather="user-check" /><span>Auth</span></Link>
-            <ul className="dropdown-menu">
-              <li><Link href={route('profile.edit')}>Change Password</Link></li>
-              <li><Link href="auth-register.html">Register</Link></li>
-              <li><Link href="auth-forgot-password.html">Forgot Password</Link></li>
-              <li><Link href="auth-reset-password.html">Reset Password</Link></li>
-              <li><Link href="subscribe.html">Subscribe</Link></li>
-            </ul>
-          </li>
-        </ul>
-      </aside>
-      )}
-      {user.usertype===2 &&(
-      <aside id="sidebar-wrapper">
-        <div className="sidebar-brand">
-          <Link href={route('moderator')}> <img alt="image" src="assets/img/logo.png" className="header-logo" /> <span className="logo-name">Otika</span>
-          </Link>
-        </div>
-        <ul className="sidebar-menu">
-          <li className="menu-header">Main</li>
-          <li className="dropdown active">
-            <Link href={route('moderator')} className="nav-link"><i data-feather="monitor" /><span>Dashboard</span></Link>
-          </li>
-          <li className="dropdown">
-            <Link href="#" className="menu-toggle nav-link has-dropdown"><i data-feather="briefcase" /><span>Sales</span></Link>
-            <ul className="dropdown-menu">
               <li><Link className="nav-link" href="widget-chart.html">Add Sale</Link></li>
               <li><Link className="nav-link" href="widget-data.html">Total Sales</Link></li>
             </ul>
@@ -60,18 +27,18 @@ export default function Sidebar() {
 
           <li className="menu-header">Pages</li>
           <li className="dropdown">
-            <Link href="#" className="menu-toggle nav-link has-dropdown"><i data-feather="user-check" /><span>Auth</span></Link>
+            <Link className="menu-toggle nav-link has-dropdown"><i data-feather="user-check" /><span>Auth</span></Link>
             <ul className="dropdown-menu">
               <li><Link href={route('profile.edit')}>Change Password</Link></li>
               <li><Link href="auth-register.html">Register</Link></li>
               <li><Link href="auth-forgot-password.html">Forgot Password</Link></li>
               <li><Link href="auth-reset-password.html">Reset Password</Link></li>
-              <li><Link href="subscribe.html">Subscribe</Link></li>
+              <li><Link href={route('users')}>Users</Link></li>
             </ul>
           </li>
         </ul>
       </aside>
-      )}
+
       
       </div>
     </div>

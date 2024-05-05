@@ -16,7 +16,10 @@ Route::get('/', function () {
 });
 Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard')->middleware('user');
 Route::get('/moderator', [UserController::class, 'index'])->name('moderator')->middleware('moderator');
-Route::get('/admin', [UserController::class, 'index'])->name('admin')->middleware('admin');
+Route::middleware('admin')->group(function () {
+    Route::get('/admin', [UserController::class, 'index'])->name('admin');
+    Route::get('/users', [UserController::class, 'user'])->name('users');
+});
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard');
 // })->middleware(['auth', 'verified','user'])->name('dashboard');
