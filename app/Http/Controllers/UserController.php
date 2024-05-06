@@ -25,4 +25,8 @@ class UserController extends Controller
         $data['users'] = User::get();
         return Inertia::render('Backend/User',$data);
     }
+    public function userEdit(string $id){
+        $data['user'] = User::find($id);
+        return Inertia::render('Backend/UserEdit',$data);
+    }
 }

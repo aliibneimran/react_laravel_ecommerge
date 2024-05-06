@@ -19,6 +19,7 @@ Route::get('/moderator', [UserController::class, 'index'])->name('moderator')->m
 Route::middleware('admin')->group(function () {
     Route::get('/admin', [UserController::class, 'index'])->name('admin');
     Route::get('/users', [UserController::class, 'user'])->name('users');
+    Route::get('/users/{id}', [UserController::class, 'userEdit'])->name('user_edit');
 });
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard');

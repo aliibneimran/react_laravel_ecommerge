@@ -37,9 +37,11 @@ export default function User() {
                                                     <td>{index + 1}</td>
                                                     <td>{item.name}</td>
                                                     <td>{item.email}</td>
-                                                    {item.usertype === 1 ? "Admin" : item.usertype === 2 ? "Moderator" : "User"}
+                                                    <td>{item.usertype === 1 ? "Admin" : item.usertype === 2 ? "Moderator" : "User"}</td>
                                                     <td>
-                                                        <Link href="">Edit</Link>
+                                                        <Link href={route('user_edit/',item.id)} className="mr-2"><i data-feather="edit" className="p-1"/></Link>
+                                                        <Link href="" className="mr-2"><i data-feather="eye" className="p-1"/></Link>
+                                                        <Link href=""><i data-feather="trash-2" className="p-1 text-red"/></Link>
                                                     </td>
                                                 </tr>
                                             ))}

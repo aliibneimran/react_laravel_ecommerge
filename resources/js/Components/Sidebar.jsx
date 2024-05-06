@@ -17,6 +17,7 @@ export default function Sidebar() {
           <li className="dropdown active">
             <Link href={route('admin')} className="nav-link"><i data-feather="monitor" /><span>Dashboard</span></Link>
           </li>
+          <li><Link href={route('users')}><i data-feather="users" /><span>User</span></Link></li>
           <li className="dropdown">
             <Link href="#" className="menu-toggle nav-link has-dropdown"><i data-feather="briefcase" /><span>Sales</span></Link>
             <ul className="dropdown-menu">
@@ -33,7 +34,6 @@ export default function Sidebar() {
               <li><Link href="auth-register.html">Register</Link></li>
               <li><Link href="auth-forgot-password.html">Forgot Password</Link></li>
               <li><Link href="auth-reset-password.html">Reset Password</Link></li>
-              <li><Link href={route('users')}>Users</Link></li>
             </ul>
           </li>
         </ul>
